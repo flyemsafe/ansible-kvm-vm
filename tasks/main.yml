@@ -2,7 +2,7 @@
 # tasks file for playbooks/roles/kvm-vm
 - name: Check if operating system disk already exists
   stat:
-    path: /var/lib/libvirt/images/{{ kvm_vm_os_disk_name }}.qcow2
+    path: "{{ kvm_vm_img_path }}/{{ kvm_vm_os_disk_name }}.qcow2"
     get_checksum: no
     get_md5: no
     get_mime: no
